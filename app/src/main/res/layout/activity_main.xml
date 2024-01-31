@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#008102"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_percent="0.35"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardView"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.5"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#D8C080">
+
+            <ImageView
+                android:id="@+id/reset"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/reset"
+                app:layout_constraintBottom_toBottomOf="@id/const_menu"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintLeft_toLeftOf="@id/const_menu"
+                app:layout_constraintRight_toRightOf="@+id/const_menu"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.067"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/countDisplay"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="@string/hint"
+                android:textColorHint="#595959"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="@id/const_menu"
+                app:layout_constraintHorizontal_bias="0.826"
+                app:layout_constraintLeft_toLeftOf="@id/const_menu"
+                app:layout_constraintRight_toRightOf="@id/countDeca"
+                app:layout_constraintTop_toTopOf="@id/const_menu"
+                app:layout_constraintVertical_bias="0.051" />
+
+            <TextView
+                android:id="@+id/countDeca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deca"
+                android:textAlignment="textStart"
+                android:textColor="#404040"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/const_menu"
+                app:layout_constraintHorizontal_bias="0.554"
+                app:layout_constraintLeft_toLeftOf="@id/const_menu"
+                app:layout_constraintRight_toRightOf="@id/const_menu"
+                app:layout_constraintTop_toTopOf="@id/const_menu"
+                app:layout_constraintVertical_bias="0.103" />
+
+            <TextView
+                android:id="@+id/natural"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:hint="@string/hint"
+                android:textColorHint="#595959"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textAlignment="textEnd"
+                app:layout_constraintBottom_toBottomOf="@id/const_menu"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintLeft_toLeftOf="@id/const_menu"
+                app:layout_constraintRight_toRightOf="@id/const_menu"
+                app:layout_constraintTop_toTopOf="@id/const_menu"
+                app:layout_constraintVertical_bias="0.051" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:cardCornerRadius="250dp"
+                app:layout_constraintWidth_percent="0.6"
+                app:layout_constraintHeight_percent="0.63"
+                app:layout_constraintBottom_toBottomOf="@id/const_menu"
+                app:layout_constraintLeft_toLeftOf="@id/const_menu"
+                app:layout_constraintRight_toRightOf="@id/const_menu"
+                app:layout_constraintTop_toTopOf="@id/const_menu"
+                app:layout_constraintVertical_bias="0.642" >
+
+                <TextView
+                    android:id="@+id/counter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/my_font_2"
+                    android:background="#008102"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:text="@string/counter"
+                    android:textColor="@color/white"
+                    android:textSize="170sp"
+                    android:gravity="center" />
+
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
