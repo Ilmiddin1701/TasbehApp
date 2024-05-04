@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TasbehCloneApp</string>
+    <string name="app_name">Tasbeeh Counter</string>
     <string name="counter">+</string>
     <string name="_0">0</string>
     <string name="hint">00</string>

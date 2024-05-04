@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             binding.natural.text = MySharedPreference.myCounter2.toString()
         }
 
-        binding.counter.setOnClickListener {
+        binding.btnAdd.setOnClickListener {
             var count1 = MySharedPreference.myCounter
             var count2 = MySharedPreference.myCounter2
             count1++

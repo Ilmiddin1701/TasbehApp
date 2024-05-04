@@ -1,35 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#008102"
+    android:background="#133729"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.6"
-        app:layout_constraintHeight_percent="0.35"
-        android:src="@drawable/logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/cardView"/>
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/my_font_2"
+        android:format24Hour="hh:mm:ss"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_55ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.9"
-        app:layout_constraintHeight_percent="0.5"
-        app:cardCornerRadius="10dp"
         android:layout_marginBottom="20dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.9">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/const_menu"
             android:layout_width="match_parent"
@@ -55,11 +58,11 @@
                 android:id="@+id/countDisplay"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:hint="@string/hint"
-                android:textColorHint="#595959"
+                android:text=""
                 android:textAlignment="textEnd"
                 android:textColor="@color/black"
+                android:textColorHint="#595959"
                 android:textSize="40sp"
                 app:layout_constraintBottom_toBottomOf="@id/const_menu"
                 app:layout_constraintHorizontal_bias="0.826"
@@ -87,12 +90,12 @@
                 android:id="@+id/natural"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:hint="@string/hint"
-                android:textColorHint="#595959"
-                android:textColor="@color/black"
-                android:textSize="40sp"
+                android:text=""
                 android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textColorHint="#595959"
+                android:textSize="40sp"
                 app:layout_constraintBottom_toBottomOf="@id/const_menu"
                 app:layout_constraintHorizontal_bias="0.9"
                 app:layout_constraintLeft_toLeftOf="@id/const_menu"
@@ -101,31 +104,23 @@
                 app:layout_constraintVertical_bias="0.051" />
 
             <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:cardCornerRadius="250dp"
-                app:layout_constraintWidth_percent="0.6"
-                app:layout_constraintHeight_percent="0.63"
-                app:layout_constraintBottom_toBottomOf="@id/const_menu"
-                app:layout_constraintLeft_toLeftOf="@id/const_menu"
-                app:layout_constraintRight_toRightOf="@id/const_menu"
-                app:layout_constraintTop_toTopOf="@id/const_menu"
-                app:layout_constraintVertical_bias="0.642" >
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="180dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.7">
 
-                <TextView
-                    android:id="@+id/counter"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/my_font_2"
-                    android:background="#008102"
+                <ImageView
+                    android:id="@+id/btnAdd"
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="@dimen/_180sdp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?selectableItemBackground"
-                    android:text="@string/counter"
-                    android:textColor="@color/white"
-                    android:textSize="170sp"
-                    android:gravity="center" />
-
+                    android:src="@drawable/add_tas" />
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
